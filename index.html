@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R&S Consulting | Das AI-Revenue Protokoll</title>
-    <meta name="description" content="Lerne, wie du mit ChatGPT ein seriöses Einkommen aufbaust.">
+    <title>R&S Consulting | ChatGPT Masterclass</title>
+    <meta name="description" content="Verdiene 5.000€+ im Monat mit einfachen ChatGPT Aufgaben.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,10 +13,9 @@
 
     <style>
         /* =========================================
-           1. RESET & CORE VARIABLES
+           1. CORE VARIABLES & RESET
            ========================================= */
         :root {
-            /* Colors */
             --color-bg: #ffffff;
             --color-bg-alt: #F8F9FA;
             --color-bg-dark: #0F172A;
@@ -29,36 +28,29 @@
             --color-primary-dark: #1DA851;
             --color-primary-light: #DCFCE7;
 
-            --color-accent: #D4AF37; /* Champagne Gold */
+            --color-accent: #D4AF37; /* Gold */
             --color-accent-light: #FFFBEB;
 
             --color-border: #E2E8F0;
             --color-error: #EF4444;
 
-            /* Typography */
             --font-serif: 'Playfair Display', serif;
             --font-sans: 'Inter', sans-serif;
 
-            /* Spacing & Layout */
             --container-width: 1200px;
-            --radius-sm: 4px;
+            
             --radius-md: 8px;
             --radius-lg: 16px;
             --radius-xl: 24px;
 
-            /* Shadows */
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
             --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
             --shadow-glow: 0 0 20px rgba(37, 211, 102, 0.2);
 
-            /* Transitions */
-            --transition-fast: 0.2s ease;
             --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Reset */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; font-size: 16px; }
         body {
@@ -70,14 +62,14 @@
             -webkit-font-smoothing: antialiased;
         }
         img, svg, video { max-width: 100%; display: block; }
-        a { text-decoration: none; color: inherit; transition: var(--transition-fast); }
+        a { text-decoration: none; color: inherit; transition: var(--transition-normal); }
         ul { list-style: none; }
         button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
         /* =========================================
-           2. TYPOGRAPHY SYSTEM
+           2. TYPOGRAPHY
            ========================================= */
-        h1, h2, h3, h4, h5, h6 {
+        h1, h2, h3, h4 {
             font-family: var(--font-serif);
             color: var(--color-text-main);
             line-height: 1.2;
@@ -86,38 +78,28 @@
         
         .display-1 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.02em; }
         .display-2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.01em; }
-        .display-3 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
         
         .lead { font-size: 1.125rem; color: var(--color-text-muted); font-weight: 400; max-width: 60ch; }
         .text-small { font-size: 0.875rem; }
-        .text-accent { color: var(--color-accent); }
         .text-primary { color: var(--color-primary); }
         
         .highlight {
-            position: relative;
-            z-index: 1;
-            white-space: nowrap;
+            position: relative; z-index: 1; white-space: nowrap;
         }
         .highlight::after {
-            content: '';
-            position: absolute; bottom: 0.1em; left: 0; width: 100%; height: 0.3em;
+            content: ''; position: absolute; bottom: 0.1em; left: 0; width: 100%; height: 0.3em;
             background-color: rgba(37, 211, 102, 0.2); z-index: -1; transform: skewX(-10deg);
         }
 
         /* =========================================
-           3. LAYOUT UTILITIES
+           3. LAYOUT
            ========================================= */
-        .container {
-            width: 100%; max-width: var(--container-width);
-            margin: 0 auto; padding: 0 24px;
-        }
-
+        .container { width: 100%; max-width: var(--container-width); margin: 0 auto; padding: 0 24px; }
         .section { padding: 100px 0; position: relative; }
         .section-bg { background-color: var(--color-bg-alt); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
         
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        
         .flex-center { display: flex; align-items: center; justify-content: center; }
         .spacer-sm { height: 20px; }
 
@@ -149,96 +131,76 @@
             text-transform: uppercase; letter-spacing: 0.05em;
         }
         .badge-red { background: #FEF2F2; color: var(--color-error); border: 1px solid #FECACA; }
-        .badge-gold { background: var(--color-accent-light); color: var(--color-accent); border: 1px solid #FDE68A; }
 
         /* =========================================
-           5. HERO SECTION & NEW VIDEO LAYOUT
+           5. HERO & VIDEO STACK
            ========================================= */
-        .hero { padding-top: 60px; padding-bottom: 120px; overflow: visible; }
+        .hero { padding-top: 60px; padding-bottom: 120px; position: relative; }
 
-        .floating-logos {
+        /* Background floating icons */
+        .floating-bg {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             pointer-events: none; z-index: -1; overflow: hidden;
         }
-        .float-item { position: absolute; opacity: 0.05; animation: float 10s infinite ease-in-out alternate; }
-        .float-1 { top: 10%; left: 5%; width: 60px; animation-delay: 0s; }
-        .float-2 { bottom: 20%; left: 10%; width: 90px; animation-delay: 2s; }
-        .float-3 { top: 15%; right: 10%; width: 80px; animation-delay: 4s; }
-        .float-4 { bottom: 30%; right: 5%; width: 50px; animation-delay: 1s; }
-        @keyframes float { 0% { transform: translateY(0); } 100% { transform: translateY(-30px); } }
+        .float-icon { position: absolute; opacity: 0.04; animation: float 10s infinite ease-in-out alternate; }
+        .icon-1 { top: 10%; left: 5%; width: 60px; }
+        .icon-2 { bottom: 20%; right: 10%; width: 80px; animation-delay: 2s; }
+        @keyframes float { 0% { transform: translateY(0); } 100% { transform: translateY(-20px); } }
 
-        /* --- NEW STACK LAYOUT FOR VIDEO --- */
-        .video-stack-vertical {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            width: 100%;
-            max-width: 550px; /* Breite des Stacks begrenzen */
-            margin: 0 auto;
+        /* --- THE VIDEO STACK (VERTICAL) --- */
+        .video-stack-container {
+            display: flex; flex-direction: column; align-items: center;
+            position: relative; width: 100%; max-width: 550px; margin: 0 auto;
         }
 
-        /* 1. Das Video (Oben) */
-        .video-card-top {
-            width: 100%;
-            aspect-ratio: 16/9;
-            background: #000;
-            border-radius: var(--radius-xl);
-            box-shadow: var(--shadow-xl);
-            z-index: 10; /* Liegt oben */
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            border: 4px solid white;
-            transition: transform 0.3s ease;
+        /* Video Top */
+        .video-top {
+            width: 100%; aspect-ratio: 16/9; background: #000;
+            border-radius: var(--radius-xl); box-shadow: var(--shadow-xl);
+            z-index: 10; position: relative; overflow: hidden;
+            border: 4px solid white; cursor: pointer; transition: transform 0.3s ease;
         }
-        .video-card-top:hover { transform: scale(1.02); }
-
+        .video-top:hover { transform: scale(1.02); }
+        
         .video-thumb {
             width: 100%; height: 100%;
             background: linear-gradient(145deg, #1a1a1a 0%, #000000 100%);
             display: flex; align-items: center; justify-content: center;
             position: relative;
         }
-
-        .play-button-wrapper {
+        .play-btn-circle {
             width: 80px; height: 80px; border-radius: 50%;
-            background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255,255,255,0.15); backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
             display: flex; align-items: center; justify-content: center;
             animation: pulse 2s infinite;
         }
-        .play-triangle {
+        .play-arrow {
             width: 0; height: 0; border-style: solid;
-            border-width: 12px 0 12px 20px; border-color: transparent transparent transparent #ffffff;
+            border-width: 12px 0 12px 20px; border-color: transparent transparent transparent #fff;
             margin-left: 4px;
         }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.4); } 70% { box-shadow: 0 0 0 15px rgba(255,255,255,0); } 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); } }
 
-        /* 2. Die Info Box (Unten) */
-        .info-card-bottom {
-            width: 94%; /* Etwas schmaler als Video für "Stack"-Look */
-            background: white;
-            border: 1px solid var(--color-border);
-            border-radius: 0 0 var(--radius-xl) var(--radius-xl); /* Nur unten rund */
+        /* Info Box Bottom */
+        .info-box-bottom {
+            width: 94%;
+            background: white; border: 1px solid var(--color-border);
+            border-radius: 0 0 var(--radius-xl) var(--radius-xl);
             padding: 40px 30px 30px 30px;
-            margin-top: -20px; /* Zieht die Box unter das Video */
-            z-index: 1; /* Liegt hinter Video */
+            margin-top: -20px; z-index: 1;
             box-shadow: var(--shadow-lg);
-            position: relative;
         }
-
+        
         .info-title {
-            font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;
+            font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;
             color: var(--color-text-muted); margin-bottom: 15px; font-weight: 700;
             border-bottom: 1px solid var(--color-border); padding-bottom: 10px;
         }
 
-        .steps-list { margin-bottom: 20px; }
-        .step-item {
-            display: flex; align-items: center; gap: 12px;
-            margin-bottom: 10px; font-size: 1rem; color: var(--color-text-main);
-            font-weight: 500;
+        .steps-list li {
+            display: flex; align-items: center; gap: 12px; margin-bottom: 10px;
+            font-size: 0.95rem; font-weight: 500; color: var(--color-text-main);
         }
         .step-num {
             width: 24px; height: 24px; background: var(--color-primary-light);
@@ -247,65 +209,48 @@
             font-size: 0.8rem; font-weight: bold; flex-shrink: 0;
         }
 
-        .learn-highlight {
+        .highlight-box {
             background: var(--color-bg-dark); color: white;
             padding: 16px; border-radius: var(--radius-md);
-            font-size: 0.9rem; line-height: 1.5;
-            position: relative; overflow: hidden;
+            font-size: 0.9rem; margin-top: 15px; line-height: 1.5;
         }
-        .learn-highlight strong { color: var(--color-primary); display: block; margin-bottom: 4px; }
-        .learn-highlight::after {
-            content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
-            background: var(--color-primary);
-        }
+        .highlight-box strong { color: var(--color-primary); display: block; margin-bottom: 4px; font-size: 1rem;}
 
         /* =========================================
-           6. OTHER SECTIONS
+           6. MODULES & REVIEWS
            ========================================= */
-        .goal-card { padding: 20px; transition: var(--transition-normal); }
-        .goal-card:hover { transform: translateY(-5px); }
-        .goal-icon-lg { font-size: 3rem; margin-bottom: 20px; display: block; }
-
         .module-card {
             background: white; border: 1px solid var(--color-border);
-            border-radius: var(--radius-lg); overflow: hidden;
-            transition: var(--transition-normal); height: 100%;
+            border-radius: var(--radius-lg); overflow: hidden; height: 100%;
+            transition: var(--transition-normal);
         }
         .module-card:hover { border-color: var(--color-primary); box-shadow: var(--shadow-lg); }
-        .module-header { padding: 24px; background: var(--color-bg-alt); border-bottom: 1px solid var(--color-border); }
-        .module-body { padding: 24px; }
-        .lesson-list li {
-            margin-bottom: 10px; padding-left: 20px; position: relative;
-            font-size: 0.9rem; color: var(--color-text-muted);
+        .mod-head { padding: 20px; background: var(--color-bg-alt); border-bottom: 1px solid var(--color-border); }
+        .mod-body { padding: 20px; }
+        .mod-body ul li {
+            margin-bottom: 8px; padding-left: 20px; position: relative; font-size: 0.9rem; color: var(--color-text-muted);
         }
-        .lesson-list li::before { content: '✓'; position: absolute; left: 0; color: var(--color-primary); font-weight: bold; }
+        .mod-body ul li::before { content: '✓'; position: absolute; left: 0; color: var(--color-primary); font-weight: bold; }
 
-        .review-card { background: var(--color-bg-alt); padding: 30px; border-radius: var(--radius-lg); }
-        .star-rating { color: var(--color-accent); letter-spacing: 2px; margin-bottom: 16px; }
-        
-        .faq-item { border-bottom: 1px solid var(--color-border); }
-        .faq-btn { width: 100%; text-align: left; padding: 20px 0; font-weight: 600; display: flex; justify-content: space-between; }
-        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-        .faq-content p { padding-bottom: 20px; color: var(--color-text-muted); }
+        .review-card { background: var(--color-bg-alt); padding: 25px; border-radius: var(--radius-lg); }
+        .stars { color: var(--color-accent); letter-spacing: 2px; margin-bottom: 15px; }
 
         /* =========================================
            7. RESPONSIVE
            ========================================= */
         @media (max-width: 1024px) {
-            .grid-2 { grid-template-columns: 1fr; gap: 60px; text-align: center; }
+            .grid-2 { grid-template-columns: 1fr; gap: 50px; text-align: center; }
             .hero-content { display: flex; flex-direction: column; align-items: center; }
             .btn-whatsapp { justify-content: center; text-align: center; }
             .desktop-cta { width: 100%; max-width: 100%; display: flex; flex-direction: column; align-items: center; }
-            .video-stack-vertical { width: 100%; }
             .display-1 { font-size: 2.5rem; }
         }
-
         @media (max-width: 768px) {
             .grid-3 { grid-template-columns: 1fr; }
-            .mobile-sticky-bar { display: flex !important; }
+            .info-box-bottom { width: 100%; padding: 30px 20px 20px 20px; }
             .desktop-cta { display: none; }
+            .mobile-sticky-bar { display: flex !important; }
             .hero { padding-top: 30px; }
-            .info-card-bottom { width: 100%; padding: 30px 20px 20px 20px; }
         }
 
         /* =========================================
@@ -313,63 +258,60 @@
            ========================================= */
         .top-bar {
             background: var(--color-bg-dark); color: white; text-align: center;
-            padding: 10px 0; font-size: 0.9rem; position: sticky; top: 0; z-index: 100;
-        }
-        .mobile-sticky-bar {
-            position: fixed; bottom: 0; left: 0; width: 100%;
-            background: white; border-top: 1px solid var(--color-border);
-            padding: 15px 20px; z-index: 99; display: none;
-            align-items: center; justify-content: space-between;
-            box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+            padding: 8px 0; font-size: 0.85rem; position: sticky; top: 0; z-index: 100;
         }
         .header-main {
             border-bottom: 1px solid var(--color-border); padding: 20px 0;
             background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
-            position: sticky; top: 40px; z-index: 90;
+            position: sticky; top: 36px; z-index: 90;
+        }
+        .mobile-sticky-bar {
+            position: fixed; bottom: 0; left: 0; width: 100%;
+            background: white; border-top: 1px solid var(--color-border);
+            padding: 12px 20px; z-index: 99; display: none;
+            align-items: center; justify-content: space-between;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
         }
         .logo { font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem; color: black; }
-
     </style>
 </head>
 <body>
 
     <div class="top-bar">
         <div class="container">
-            ⚠️ <strong>ACHTUNG:</strong> Der kostenlose Zugang schließt in <span id="timer" style="color: #FCA5A5; font-weight:700; margin-left:5px;">03:59:12</span>
+            ⚠️ Der kostenlose Zugang schließt in: <span id="timer" style="color: #FCA5A5; font-weight:700; margin-left:5px;">03:59:12</span>
         </div>
     </div>
 
     <header class="header-main">
         <div class="container flex-center" style="justify-content: space-between;">
             <div class="logo">R&S CONSULTING</div>
-            <div style="font-size: 0.8rem; color: var(--color-text-muted); display: flex; gap: 15px; align-items: center;">
-                <span>🔒 SSL Verschlüsselt</span>
+            <div style="font-size: 0.8rem; color: var(--color-text-muted); display: flex; gap: 15px;">
+                <span>🔒 Sicher</span>
                 <span>🇩🇪 Made in Germany</span>
             </div>
         </div>
     </header>
 
     <section class="hero">
-        <div class="floating-logos">
-            <svg class="float-item float-1" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg>
-            <svg class="float-item float-2" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
-            <svg class="float-item float-3" viewBox="0 0 24 24" fill="currentColor"><path d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66.19-.34.05-.08.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/></svg>
-            <svg class="float-item float-4" viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+        <div class="floating-bg">
+            <svg class="float-icon icon-1" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+            <svg class="float-icon icon-2" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg>
         </div>
 
         <div class="container">
             <div class="grid-2">
                 
                 <div class="hero-content">
-                    <div class="badge badge-red">🔥 Nur noch Heute Kostenfrei</div>
+                    <div class="badge badge-red">🔥 Nur heute Kostenfrei</div>
                     <div class="spacer-sm"></div>
                     
                     <h1 class="display-1">
-                        Wie man durch <span class="highlight">einfaches Schreiben</span> auf ChatGPT über 5.000€ verdient.
+                        Verdiene über <span class="highlight">5.000€ im Monat</span> mit einfachen ChatGPT-Aufgaben.
                     </h1>
                     
                     <p class="lead" style="margin-top: 24px; margin-bottom: 32px;">
-                        Kein Vorwissen nötig. 100% Anonym. Das erste System, das künstliche Intelligenz mit direkter WhatsApp-Monetarisierung verbindet.
+                        Keine Agentur gründen. Kein Vorwissen. Einfach Texte von der KI schreiben lassen und bezahlt werden. 100% Anfängerfreundlich.
                     </p>
 
                     <div style="display: flex; align-items: baseline; gap: 15px; margin-bottom: 30px;">
@@ -381,53 +323,52 @@
                         <a href="https://wa.me/DeinNummerHier" class="btn btn-whatsapp">
                             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                             <div class="btn-text-col">
-                                <span class="btn-sub">Kostenloser Zugang via</span>
-                                <span>WhatsApp anfordern</span>
+                                <span class="btn-sub">Videokurs ansehen via</span>
+                                <span>WhatsApp (Kostenlos)</span>
                             </div>
                         </a>
                         <p class="text-small" style="margin-top: 12px; color: var(--color-text-muted);">
-                            Keine Kreditkarte erforderlich. 100% Unverbindlich.
+                            Kein Abo. Kein Risiko. Sofortzugang.
                         </p>
                     </div>
                 </div>
 
-                <div class="video-stack-vertical">
+                <div class="video-stack-container">
                     
-                    <a href="https://wa.me/DeinNummerHier" class="video-card-top">
+                    <a href="https://wa.me/DeinNummerHier" class="video-top">
                         <div class="video-thumb">
-                            <div class="play-button-wrapper">
-                                <div class="play-triangle"></div>
+                            <div class="play-btn-circle">
+                                <div class="play-arrow"></div>
                             </div>
-                            <div style="position: absolute; bottom: 20px; left: 0; width: 100%; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; z-index: 5;">
-                                <span style="font-weight: 700; color: white; letter-spacing: 1px; font-size: 0.9rem;">KLICKEN ZUM STARTEN</span>
-                                <span class="badge" style="background: rgba(220, 38, 38, 0.9); color: white;">● LIVE</span>
+                            <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 700; color: white; letter-spacing: 1px; font-size: 0.9rem;">HIER KLICKEN</span>
+                                <span class="badge" style="background: rgba(220, 38, 38, 0.9); color: white;">● REC</span>
                             </div>
                         </div>
                     </a>
 
-                    <div class="info-card-bottom">
+                    <div class="info-box-bottom">
                         <div class="info-title">So funktioniert's:</div>
                         <ul class="steps-list">
-                            <li class="step-item">
+                            <li>
                                 <div class="step-num">1</div>
                                 <span>Videokurs herunterladen (Kostenlos)</span>
                             </li>
-                            <li class="step-item">
+                            <li>
                                 <div class="step-num">2</div>
                                 <span>Öffnet sich direkt in WhatsApp</span>
                             </li>
-                            <li class="step-item">
+                            <li>
                                 <div class="step-num">3</div>
                                 <span>Zugang in wenigen Sekunden</span>
                             </li>
                         </ul>
                         
-                        <div class="learn-highlight">
+                        <div class="highlight-box">
                             <strong>Du lernst:</strong>
                             Wie du Texte von der KI schreiben lässt und automatisiert Auszahlungen erhältst.
                         </div>
                     </div>
-
                 </div>
 
             </div>
@@ -437,26 +378,26 @@
     <section class="section section-bg">
         <div class="container">
             <div style="text-align: center; max-width: 700px; margin: 0 auto 60px auto;">
-                <h2 class="display-2">Dein neues Leben wartet</h2>
+                <h2 class="display-2">Was du erreichen wirst</h2>
                 <p class="lead" style="margin: 15px auto 0 auto;">
-                    Wir verkaufen keinen Kurs. Wir bieten dir den Schlüssel zu einem Lebensstil, von dem andere nur träumen können.
+                    Kein kompliziertes Business. Nur ein einfacher Weg zu mehr Freiheit.
                 </p>
             </div>
             <div class="grid-3">
                 <div class="goal-card">
-                    <span class="goal-icon-lg">🌍</span>
-                    <h3>Ortsunabhängigkeit</h3>
-                    <p class="text-muted">Egal ob Bali oder Balkon. Dein Laptop ist dein Büro.</p>
+                    <div style="font-size: 3rem; margin-bottom: 15px;">🌍</div>
+                    <h3>Ortsunabhängig</h3>
+                    <p class="text-small" style="color: #666;">Arbeite von Zuhause oder im Urlaub. Alles was du brauchst ist Internet.</p>
                 </div>
                 <div class="goal-card">
-                    <span class="goal-icon-lg">👨‍👩‍👧‍👦</span>
-                    <h3>Zeit für Familie</h3>
-                    <p class="text-muted">Verpasse keine Momente mehr. Habe endlich Zeit.</p>
+                    <div style="font-size: 3rem; margin-bottom: 15px;">👨‍👩‍👧‍👦</div>
+                    <h3>Mehr Zeit</h3>
+                    <p class="text-small" style="color: #666;">Keine 40-Stunden Woche mehr. Die KI übernimmt 90% der Arbeit.</p>
                 </div>
                 <div class="goal-card">
-                    <span class="goal-icon-lg">🔓</span>
-                    <h3>Raus aus dem Job</h3>
-                    <p class="text-muted">Tausche 40 Stunden Stress gegen Freiheit.</p>
+                    <div style="font-size: 3rem; margin-bottom: 15px;">💸</div>
+                    <h3>Stabiles Einkommen</h3>
+                    <p class="text-small" style="color: #666;">Baue dir 5.000€+ im Monat auf. Monat für Monat.</p>
                 </div>
             </div>
         </div>
@@ -464,49 +405,20 @@
 
     <section class="section">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 class="display-2">Der Kurs-Inhalt</h2>
-                <p class="lead" style="margin: 0 auto;">Drei kompakte Module. Nur Ergebnisse.</p>
-            </div>
-            <div class="grid-3">
-                <div class="module-card">
-                    <div class="module-header">
-                        <span class="text-primary" style="font-weight: 700;">MODUL 1</span>
-                        <h3>Das Fundament</h3>
-                    </div>
-                    <div class="module-body">
-                        <ul class="lesson-list">
-                            <li>Einrichtung des KI-Accounts</li>
-                            <li>Die "Ghost-Writer" Einstellungen</li>
-                            <li>Sicherheit & Anonymität</li>
-                        </ul>
-                    </div>
+            <div class="grid-2">
+                <div>
+                    <span class="badge" style="background: #FFFBEB; color: #D4AF37; margin-bottom: 20px;">Über R&S Consulting</span>
+                    <h2 class="display-2">Wir machen es einfach.</h2>
+                    <div class="spacer-sm"></div>
+                    <p class="lead">
+                        Vergiss komplizierte Technik. Wir zeigen dir, wie du ChatGPT nutzt, um Geld zu verdienen. Punkt.
+                    </p>
+                    <p style="margin-top: 20px; color: #666;">
+                        Wir haben tausenden Menschen gezeigt, wie man einfache Texte kopiert, einfügt und damit ein seriöses Einkommen aufbaut. Ohne Vorkenntnisse.
+                    </p>
                 </div>
-                <div class="module-card" style="border-color: var(--color-primary); box-shadow: var(--shadow-glow); transform: scale(1.05); z-index: 2;">
-                    <div class="module-header" style="background: var(--color-primary-light);">
-                        <span class="text-primary" style="font-weight: 700;">MODUL 2</span>
-                        <h3>Die 5.000€ Methode</h3>
-                    </div>
-                    <div class="module-body">
-                        <ul class="lesson-list">
-                            <li>Der exakte Prompt-Befehl</li>
-                            <li>Plattformen für Einreichung</li>
-                            <li>Auszahlungsprozesse</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="module-card">
-                    <div class="module-header">
-                        <span class="text-primary" style="font-weight: 700;">MODUL 3</span>
-                        <h3>Skalierung</h3>
-                    </div>
-                    <div class="module-body">
-                        <ul class="lesson-list">
-                            <li>Automatisierung mit Zapier</li>
-                            <li>Zeitaufwand senken</li>
-                            <li>Einkommen verdoppeln</li>
-                        </ul>
-                    </div>
+                <div style="background: #F8F9FA; height: 300px; border-radius: 24px; display: flex; align-items: center; justify-content: center; border: 1px solid #eee;">
+                    <p style="color: #999;">(Bild: Glückliche Teilnehmer / Team)</p>
                 </div>
             </div>
         </div>
@@ -514,49 +426,80 @@
 
     <section class="section section-bg">
         <div class="container">
-            <h2 class="display-2" style="text-align: center; margin-bottom: 60px;">Erfolgsgeschichten</h2>
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 class="display-2">Der Inhalt</h2>
+                <p class="lead">Kurz, knapp und direkt anwendbar.</p>
+            </div>
             <div class="grid-3">
-                <div class="review-card">
-                    <div class="star-rating">★★★★★</div>
-                    <p style="font-style: italic; margin-bottom: 20px;">"Habe im zweiten Monat meine ersten 1.200€ verdient. Unglaublich einfach."</p>
-                    <div><strong>Michael R.</strong><br><span class="text-small text-muted">Teilnehmer</span></div>
+                <div class="module-card">
+                    <div class="mod-head">
+                        <span class="text-primary" style="font-weight: 700;">TEIL 1</span>
+                        <h3>Die Vorbereitung</h3>
+                    </div>
+                    <div class="mod-body">
+                        <ul>
+                            <li>Kostenlosen ChatGPT Account erstellen</li>
+                            <li>Die richtigen Einstellungen</li>
+                            <li>Sicher & Anonym starten</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="review-card">
-                    <div class="star-rating">★★★★★</div>
-                    <p style="font-style: italic; margin-bottom: 20px;">"Endlich kein Krypto Unsinn. Einfaches Schreiben, sichere Bezahlung."</p>
-                    <div><strong>Julia K.</strong><br><span class="text-small text-muted">Teilnehmerin</span></div>
+                <div class="module-card" style="border-color: var(--color-primary); box-shadow: var(--shadow-glow); transform: scale(1.05); z-index: 2;">
+                    <div class="mod-head" style="background: var(--color-primary-light);">
+                        <span class="text-primary" style="font-weight: 700;">TEIL 2</span>
+                        <h3>Die 5.000€ Methode</h3>
+                    </div>
+                    <div class="mod-body">
+                        <ul>
+                            <li>Der "Geld-Befehl" für ChatGPT</li>
+                            <li>Texte kopieren & einfügen</li>
+                            <li>Wo du das Geld ausgezahlt bekommst</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="review-card">
-                    <div class="star-rating">★★★★★</div>
-                    <p style="font-style: italic; margin-bottom: 20px;">"Der Videokurs über WhatsApp ist genial. Nur direkte Umsetzung."</p>
-                    <div><strong>Thomas B.</strong><br><span class="text-small text-muted">Teilnehmer</span></div>
+                <div class="module-card">
+                    <div class="mod-head">
+                        <span class="text-primary" style="font-weight: 700;">TEIL 3</span>
+                        <h3>Verdoppeln</h3>
+                    </div>
+                    <div class="mod-body">
+                        <ul>
+                            <li>Wie du 2x schneller bist</li>
+                            <li>Automatisierung für Faule</li>
+                            <li>Mehr Freizeit genießen</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="section">
-        <div class="container" style="max-width: 800px;">
-            <h2 class="display-2" style="text-align: center; margin-bottom: 40px;">Häufige Fragen</h2>
-            <div class="faq-item">
-                <button class="faq-btn" onclick="toggleFaq(this)">Brauche ich Startkapital? <span>+</span></button>
-                <div class="faq-content"><p>Nein. Die Methoden basieren auf kostenlosen Tools.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-btn" onclick="toggleFaq(this)">Wie lange bis zur ersten Auszahlung? <span>+</span></button>
-                <div class="faq-content"><p>Die meisten sehen Ergebnisse in 14-21 Tagen.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-btn" onclick="toggleFaq(this)">Ist das legal? <span>+</span></button>
-                <div class="faq-content"><p>Ja, 100% legal und steuerlich sauber.</p></div>
+        <div class="container">
+            <h2 class="display-2" style="text-align: center; margin-bottom: 60px;">Das sagen Teilnehmer</h2>
+            <div class="grid-3">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p style="font-style: italic;">"Ich kann kaum Englisch und keine Technik. Trotzdem habe ich im ersten Monat 1.200€ verdient. ChatGPT macht alles."</p>
+                    <p style="margin-top: 15px; font-weight: bold;">- Michael R.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p style="font-style: italic;">"Endlich was einfaches. Kein Trading, kein Verkaufen. Einfach Texte erstellen und fertig."</p>
+                    <p style="margin-top: 15px; font-weight: bold;">- Julia K.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p style="font-style: italic;">"Der Kurs auf WhatsApp ist super. Man bekommt sofort die Videos und kann starten."</p>
+                    <p style="margin-top: 15px; font-weight: bold;">- Thomas B.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer style="background: var(--color-bg-dark); color: var(--color-text-muted); padding: 80px 0 40px 0; text-align: center;">
+    <footer style="background: var(--color-bg-dark); color: #64748B; padding: 60px 0 40px 0; text-align: center;">
         <div class="container">
             <div class="logo" style="color: white; margin-bottom: 20px;">R&S CONSULTING</div>
-            <p class="text-small" style="max-width: 500px; margin: 0 auto 40px auto;">Wir helfen Menschen dabei, durch Technologie finanzielle Unabhängigkeit zu erreichen.</p>
             <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; display: flex; justify-content: center; gap: 20px; font-size: 0.8rem;">
                 <a href="#">Impressum</a><a href="#">Datenschutz</a><a href="#">AGB</a>
             </div>
@@ -566,8 +509,8 @@
 
     <div class="mobile-sticky-bar">
         <div style="display: flex; flex-direction: column;">
-            <span style="text-decoration: line-through; color: var(--color-text-muted); font-size: 0.75rem;">399€</span>
-            <span style="color: var(--color-primary); font-weight: bold;">KOSTENLOS</span>
+            <span style="text-decoration: line-through; color: #999; font-size: 0.75rem;">399€</span>
+            <span style="color: var(--color-primary); font-weight: bold;">GRATIS</span>
         </div>
         <a href="https://wa.me/DeinNummerHier" class="btn btn-whatsapp" style="width: auto; padding: 10px 20px; font-size: 0.9rem;">
             Jetzt Sichern
@@ -575,6 +518,7 @@
     </div>
 
     <script>
+        // Timer Script
         function startTimer(duration, display) {
             let timer = duration, hours, minutes, seconds;
             setInterval(function () {
@@ -587,12 +531,6 @@
                 display.textContent = hours + ":" + minutes + ":" + seconds;
                 if (--timer < 0) { timer = duration; }
             }, 1000);
-        }
-        function toggleFaq(element) {
-            const content = element.nextElementSibling;
-            const isActive = content.style.maxHeight;
-            document.querySelectorAll('.faq-content').forEach(el => el.style.maxHeight = null);
-            if (!isActive) { content.style.maxHeight = content.scrollHeight + "px"; }
         }
         window.onload = function () {
             startTimer(60 * 60 * 4, document.querySelector('#timer'));
