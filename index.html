@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R&S Consulting | ChatGPT Masterclass</title>
+    <title>R&S Consulting | Dein Weg zum KI-Einkommen</title>
     <meta name="description" content="Verdiene 5.000€+ im Monat mit einfachen ChatGPT Aufgaben.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -223,14 +223,18 @@
             background: white; border: 1px solid var(--color-border);
             border-radius: var(--radius-lg); overflow: hidden; height: 100%;
             transition: var(--transition-normal);
+            display: flex; flex-direction: column;
         }
-        .module-card:hover { border-color: var(--color-primary); box-shadow: var(--shadow-lg); }
-        .mod-head { padding: 20px; background: var(--color-bg-alt); border-bottom: 1px solid var(--color-border); }
-        .mod-body { padding: 20px; }
-        .mod-body ul li {
-            margin-bottom: 8px; padding-left: 20px; position: relative; font-size: 0.9rem; color: var(--color-text-muted);
+        .module-card:hover { border-color: var(--color-primary); box-shadow: var(--shadow-lg); transform: translateY(-5px); }
+        .mod-head { padding: 25px 25px 15px 25px; background: var(--color-bg-alt); border-bottom: 1px solid var(--color-border); }
+        .mod-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        
+        /* Spezifisches Styling für die Prozess-Schritte */
+        .step-badge {
+            background: var(--color-primary-light); color: var(--color-primary-dark);
+            padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 700;
+            margin-bottom: 10px; display: inline-block;
         }
-        .mod-body ul li::before { content: '✓'; position: absolute; left: 0; color: var(--color-primary); font-weight: bold; }
 
         .review-card { background: var(--color-bg-alt); padding: 25px; border-radius: var(--radius-lg); }
         .stars { color: var(--color-accent); letter-spacing: 2px; margin-bottom: 15px; }
@@ -251,6 +255,7 @@
             .desktop-cta { display: none; }
             .mobile-sticky-bar { display: flex !important; }
             .hero { padding-top: 30px; }
+            .module-card { margin-bottom: 15px; }
         }
 
         /* =========================================
@@ -427,53 +432,83 @@
     <section class="section section-bg">
         <div class="container">
             <div style="text-align: center; margin-bottom: 60px;">
-                <h2 class="display-2">Der Inhalt</h2>
-                <p class="lead">Kurz, knapp und direkt anwendbar.</p>
+                <span class="badge" style="background: var(--color-primary-light); color: var(--color-primary-dark); margin-bottom: 15px;">Der Fahrplan</span>
+                <h2 class="display-2">So funktioniert unser KI-Coaching</h2>
+                <p class="lead" style="margin: 15px auto 0 auto;">Dein sicherer Weg von 0 auf passives Einkommen in 3 Schritten.</p>
             </div>
+            
             <div class="grid-3">
                 <div class="module-card">
                     <div class="mod-head">
-                        <span class="text-primary" style="font-weight: 700;">TEIL 1</span>
-                        <h3>Die Vorbereitung</h3>
+                        <span class="step-badge">SCHRITT 01</span>
+                        <h3>Mindset & Fundament</h3>
                     </div>
                     <div class="mod-body">
-                        <ul>
-                            <li>Kostenlosen ChatGPT Account erstellen</li>
-                            <li>Die richtigen Einstellungen</li>
-                            <li>Sicher & Anonym starten</li>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 15px;">
+                            Wir lösen technische Blockaden und schaffen die Basis. Der kostenlose Videokurs ist dein erster, risikofreier Einstieg in diese neue Welt.
+                        </p>
+                        <ul style="margin-top: auto;">
+                            <li style="font-size: 0.85rem; color: var(--color-text-main); display: flex; gap: 8px;">
+                                <span style="color: var(--color-primary);">✓</span> Zugang ohne Risiko
+                            </li>
+                            <li style="font-size: 0.85rem; color: var(--color-text-main); display: flex; gap: 8px;">
+                                <span style="color: var(--color-primary);">✓</span> Klarheit statt Chaos
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="module-card" style="border-color: var(--color-primary); box-shadow: var(--shadow-glow); transform: scale(1.05); z-index: 2;">
-                    <div class="mod-head" style="background: var(--color-primary-light);">
-                        <span class="text-primary" style="font-weight: 700;">TEIL 2</span>
-                        <h3>Die 5.000€ Methode</h3>
+
+                <div class="module-card" style="border-color: var(--color-primary); box-shadow: var(--shadow-lg);">
+                    <div class="mod-head" style="background: linear-gradient(to bottom, var(--color-primary-light), white);">
+                        <span class="step-badge" style="background: var(--color-primary); color: white;">SCHRITT 02</span>
+                        <h3>Strategie & Auswahl</h3>
                     </div>
                     <div class="mod-body">
-                        <ul>
-                            <li>Der "Geld-Befehl" für ChatGPT</li>
-                            <li>Texte kopieren & einfügen</li>
-                            <li>Wo du das Geld ausgezahlt bekommst</li>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 15px;">
+                            Wir analysieren, welches KI-Modell zu deinem Alltag passt und erstellen deine individuelle Roadmap zum Ziel.
+                        </p>
+                        <ul style="margin-top: auto;">
+                            <li style="font-size: 0.85rem; color: var(--color-text-main); display: flex; gap: 8px;">
+                                <span style="color: var(--color-primary);">✓</span> Individueller Plan
+                            </li>
+                            <li style="font-size: 0.85rem; color: var(--color-text-main); display: flex; gap: 8px;">
+                                <span style="color: var(--color-primary);">✓</span> Profitabelste Nische wählen
+                            </li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="module-card">
                     <div class="mod-head">
-                        <span class="text-primary" style="font-weight: 700;">TEIL 3</span>
-                        <h3>Verdoppeln</h3>
+                        <span class="step-badge">SCHRITT 03</span>
+                        <h3>Umsetzung & Skalierung</h3>
                     </div>
                     <div class="mod-body">
-                        <ul>
-                            <li>Wie du 2x schneller bist</li>
-                            <li>Automatisierung für Faule</li>
-                            <li>Mehr Freizeit genießen</li>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 15px;">
+                            Wir richten die KI-Tools gemeinsam ein. Du baust Systeme, die Arbeit abnehmen, und skalierst dein Einkommen Schritt für Schritt.
+                        </p>
+                        <ul style="margin-top: auto;">
+                            <li style="font-size: 0.85rem; color: var(--color-text-main); display: flex; gap: 8px;">
+                                <span style="color: var(--color-primary);">✓</span> Automation statt Zeit-Tausch
+                            </li>
+                            <li style="font-size: 0.85rem; color: var(--color-text-main); display: flex; gap: 8px;">
+                                <span style="color: var(--color-primary);">✓</span> Wachsendes Einkommen
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                 <a href="https://wa.link/8bfvny" class="btn btn-whatsapp" style="width: auto; display: inline-flex;">
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    <div class="btn-text-col">
+                        <span>Jetzt Videokurs anfragen</span>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
-
     <section class="section">
         <div class="container">
             <h2 class="display-2" style="text-align: center; margin-bottom: 60px;">Das sagen Teilnehmer</h2>
